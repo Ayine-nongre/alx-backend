@@ -6,7 +6,6 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class BasicCache(BaseCaching):
     """ Basic cache task """
-
     def put(self, key, item):
         """ method to store data in cache """
         if key is None or item is None:
@@ -18,4 +17,3 @@ class BasicCache(BaseCaching):
         if key is None:
             return
         return self.cache_data.get(key)
-    

@@ -12,7 +12,7 @@ class FIFOCache(BaseCaching):
             self.cache_data[key] = item
             if len(self.cache_data) > self.MAX_ITEMS:
                 deleted_key = list(self.cache_data.keys())[0]
-                deleted = self.cache_data.pop(next(iter(self.cache_data)))
+                self.cache_data.pop(next(iter(self.cache_data)))
                 print("DISCARD: {}".format(deleted_key))
 
     def get(self, key):
